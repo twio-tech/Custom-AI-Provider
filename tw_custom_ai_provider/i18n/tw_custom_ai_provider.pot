@@ -1,0 +1,812 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* tw_custom_ai_provider
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-11 13:10+0000\n"
+"PO-Revision-Date: 2026-11-11 13:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: tw_custom_ai_provider
+#: model:ir.module.module,description:base.module_tw_custom_ai_provider
+msgid ""
+"\n"
+"AI Custom Providers for Odoo\n"
+"=============================\n"
+"Assign a model from a custom provider to AI agents. Agents with an\n"
+"assigned model call the provider directly through the OpenAI-compatible\n"
+"API instead of going through the Odoo AI In-App Purchase service, so\n"
+"any OpenAI-compatible provider (OpenAI, Anthropic, Gemini, Mistral,\n"
+"Groq, OpenRouter, LiteLLM, vLLM, Ollama) can be used. Agents without an\n"
+"assigned model keep using Odoo AI when global routing is disabled.\n"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_agent_view_form_inherit_custom_model
+msgid "\". Requests bypass Odoo AI credits."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid "%(message)s Retry after %(delay)s seconds."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-javascript
+#: code:addons/tw_custom_ai_provider/static/src/ai_agent_panel_model.xml:0
+msgid ". Requests bypass Odoo AI credits."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.constraint,message:tw_custom_ai_provider.constraint_ai_model_unique_technical_name_per_provider
+msgid "A model with this name already exists for this provider."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.res_config_settings_view_form_custom_ai
+msgid "AI"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model,name:tw_custom_ai_provider.model_ai_agent
+msgid "AI Agent"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.module.module,shortdesc:base.module_tw_custom_ai_provider
+msgid "AI Custom Providers (OpenRouter)"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model,name:tw_custom_ai_provider.model_ai_attachment_vacuum
+msgid "AI Generated Attachments that aren't used and should be autovacuumed"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_model_view_form
+msgid "AI Model"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model,name:tw_custom_ai_provider.model_ai_model
+msgid "AI Model (Custom Provider)"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.actions.act_window,name:tw_custom_ai_provider.ai_model_action
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_model_view_tree
+msgid "AI Models"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model,name:tw_custom_ai_provider.model_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_provider_view_form
+msgid "AI Provider"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.actions.act_window,name:tw_custom_ai_provider.ai_provider_action
+#: model:ir.ui.menu,name:tw_custom_ai_provider.ai_provider_menu_action
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_provider_view_tree
+msgid "AI Providers"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model,name:tw_custom_ai_provider.model_ai_session
+msgid "AI Session"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model,name:tw_custom_ai_provider.model_ai_tool
+msgid "AI Tool"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,help:tw_custom_ai_provider.field_ai_provider__api_key
+msgid "API key sent as Bearer token with every completion request."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_model__active
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_provider__active
+msgid "Active"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.res_config_settings_view_form_custom_ai
+msgid "Agent Model"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.res_config_settings_view_form_custom_ai
+msgid ""
+"All agent sessions, subagents and chat titles use this model. Individual "
+"agent selections are preserved."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_agent_view_form_inherit_custom_model
+msgid "All chat turns of this agent are sent to \""
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_provider__api_key
+msgid "Api Key"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_model_view_form
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_provider_view_form
+msgid "Archived"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_res_config_settings__ai_transcription_model_id
+msgid "Audio Transcription Model"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.res_config_settings_view_form_custom_ai
+msgid "Audio transcription"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_provider__base_url
+msgid "Base URL"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model,name:tw_custom_ai_provider.model_mail_call_artifact
+msgid "Call Artifact"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.res_config_settings_view_form_custom_ai
+msgid ""
+"Choose a transcription model supporting verbose JSON with segment "
+"timestamps. Recordings are converted to Odoo VTT transcripts."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.res_config_settings_view_form_custom_ai
+msgid ""
+"Choose an explicit image model from a provider supporting image generation. "
+"When empty, the conversation model is used if its API supports image "
+"generation."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-javascript
+#: code:addons/tw_custom_ai_provider/static/src/openrouter_tour.js:0
+msgid ""
+"Click Test Connection to save your API key and check access to OpenRouter. "
+"If it fails, correct your key and try again."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model,name:tw_custom_ai_provider.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_provider_view_form
+msgid "Configuration"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/models/ai_model.py:0
+msgid "Configure an active global AI model and provider in Settings."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/models/ai_model.py:0
+msgid "Configure the API key and URL for the %(task)s provider."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/models/ai_model.py:0
+msgid "Configure the API key and URL for the global AI provider."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields.selection,name:tw_custom_ai_provider.selection__ai_provider__connection_status__success
+msgid "Connected"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/openai_adapter.py:0
+msgid "Connection test succeeded (%(count)s models available)."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_provider__connection_status
+msgid "Connection Status"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid "Could not connect to the AI provider. Check its URL and availability."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-javascript
+#: code:addons/tw_custom_ai_provider/static/src/openrouter_tour.js:0
+msgid ""
+"Create an API key in your OpenRouter account and paste it here. Requests can"
+" send conversation content, images and audio to that provider and may incur "
+"charges. Continue only if you are authorized to share this data."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_model__create_uid
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_provider__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_model__create_date
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_provider__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_model_view_form
+msgid "Definition"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_agent__display_name
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_attachment_vacuum__display_name
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_model__display_name
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_provider__display_name
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_session__display_name
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_tool__display_name
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_mail_call_artifact__display_name
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,help:tw_custom_ai_provider.field_ai_model__name
+msgid "Display name shown to agents users."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/openai_adapter.py:0
+msgid "Error %(status)s: %(message)s"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields.selection,name:tw_custom_ai_provider.selection__ai_provider__connection_status__error
+msgid "Failed"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_res_config_settings__ai_global_model_id
+msgid "Global AI Model"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_agent__global_model_display_name
+msgid "Global Model Display Name"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_agent__id
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_attachment_vacuum__id
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_model__id
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_provider__id
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_session__id
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_tool__id
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_mail_call_artifact__id
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_res_config_settings__ai_image_model_id
+msgid "Image Generation Model"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.res_config_settings_view_form_custom_ai
+msgid "Image generation"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.res_config_settings_view_form_custom_ai
+msgid "Images and Audio"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_model__is_api_ready
+msgid "Is Api Ready"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_agent__is_custom_model_enabled
+msgid "Is Custom Model Enabled"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_model__is_openrouter_default
+msgid "Is Openrouter Default"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_model__write_uid
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_provider__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_model__write_date
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_provider__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_agent_view_form_inherit_custom_model
+msgid "Leave empty to use Odoo AI credits"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-javascript
+#: code:addons/tw_custom_ai_provider/static/src/openrouter_tour.js:0
+msgid "Let's connect your OpenRouter account. Open the AI app."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-javascript
+#: code:addons/tw_custom_ai_provider/static/src/ai_agent_panel_model.js:0
+#: code:addons/tw_custom_ai_provider/static/src/ai_agent_panel_model.xml:0
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_agent__custom_model_id
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_agent_view_form_inherit_custom_model
+msgid "Model"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,help:tw_custom_ai_provider.field_ai_agent__custom_model_id
+msgid ""
+"Model from a custom provider used to run this agent. Leave it empty to use "
+"Odoo AI (In-App Purchase credits)."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,help:tw_custom_ai_provider.field_ai_model__technical_name
+msgid "Model identifier sent to the provider API (e.g. 'gpt-4o-mini')."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.actions.act_window,name:tw_custom_ai_provider.ai_model_action_from_provider
+#: model:ir.ui.menu,name:tw_custom_ai_provider.ai_model_menu_action
+msgid "Models"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_model__name
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_provider__name
+msgid "Name"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_agent__custom_model_display_name
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_model__name_with_provider
+msgid "Name With Provider"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid "No AI provider is currently available for this model. Try again later."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-javascript
+#: code:addons/tw_custom_ai_provider/static/src/ai_agent_panel_model.xml:0
+msgid ""
+"No custom model set: this agent runs on Odoo AI (In-App Purchase credits)."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_agent_view_form_inherit_custom_model
+msgid ""
+"No custom model set: this agent runs on Odoo AI and consumes\n"
+"                                In-App Purchase credits."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/media_adapter.py:0
+msgid ""
+"No speech was detected. Check your selected microphone, speak for a few "
+"seconds, and try again."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields.selection,name:tw_custom_ai_provider.selection__ai_provider__connection_status__not_tested
+msgid "Not tested"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-javascript
+#: code:addons/tw_custom_ai_provider/static/src/openrouter_tour.js:0
+msgid "Open AI Providers."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-javascript
+#: code:addons/tw_custom_ai_provider/static/src/openrouter_tour.js:0
+msgid "Open Configuration to manage your providers."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-javascript
+#: code:addons/tw_custom_ai_provider/static/src/openrouter_tour.js:0
+msgid "Open the apps menu to configure OpenRouter."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-javascript
+#: code:addons/tw_custom_ai_provider/static/src/openrouter_tour.js:0
+msgid "Open the preconfigured OpenRouter provider."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.actions.act_url,name:tw_custom_ai_provider.openrouter_setup_action
+#: model:ir.ui.menu,name:tw_custom_ai_provider.openrouter_setup_menu
+msgid "OpenRouter Setup Tour"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:web_tour.tour,rainbow_man_message:tw_custom_ai_provider.openrouter_setup_tour
+msgid "OpenRouter is configured. Provider usage is billed to your account."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_model__provider_id
+msgid "Provider"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,help:tw_custom_ai_provider.field_ai_provider__technical_name
+msgid "Public identifier of the provider implementation (e.g. 'openai')."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_model_view_form
+msgid "Readiness"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_model_view_form
+msgid ""
+"Requests omit the model parameter and use the default configured in your "
+"OpenRouter account."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,help:tw_custom_ai_provider.field_ai_provider__base_url
+msgid ""
+"Root URL of an OpenAI-compatible API. Change it to point to an Azure "
+"gateway, LiteLLM proxy or any OpenAI-compatible backend."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-javascript
+#: code:addons/tw_custom_ai_provider/static/src/ai_agent_panel_model.xml:0
+msgid "Runs on"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/models/res_config_settings.py:0
+msgid "Select a global AI model before enabling global routing."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/media_adapter.py:0
+msgid ""
+"Select a transcription model supporting verbose JSON with segment "
+"timestamps."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/models/ai_model.py:0
+msgid "Select an active %(task)s model in Settings > AI."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/models/ai_model.py:0
+msgid "Select an explicit model for %(task)s."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/models/res_config_settings.py:0
+msgid "Select an explicit model for images and transcription."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_provider_view_form
+msgid "Status"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_model__technical_name
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_provider__technical_name
+msgid "Technical Name"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_provider_view_form
+msgid "Test Connection"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid "The AI API key is invalid or disabled. Check the provider credentials."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid ""
+"The AI account has insufficient credits or has reached a spending limit."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid ""
+"The AI account has reached its concurrent spending budget. Try again later."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/models/ai_session.py:0
+msgid "The AI could not complete the request."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid "The AI input is too large. Use a smaller file."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/openai_adapter.py:0
+msgid "The AI model could not produce an allowed completion."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid "The AI model or endpoint was not found. Check the model identifier."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid ""
+"The AI model returned an invalid response or is unavailable. Try again "
+"later."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/openai_adapter.py:0
+msgid ""
+"The AI model returned no content. Check its output and reasoning limits."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid "The AI provider could not complete the request."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid "The AI provider encountered an internal error. Try again later."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid "The AI provider rate limit was reached. Try again later."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid "The AI provider rejected the model parameters. Check its capabilities."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid ""
+"The AI provider rejected the request. Check the model and supported "
+"parameters."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid "The AI provider returned an invalid JSON response."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/openai_adapter.py:0
+msgid "The AI provider returned an invalid completion response."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid "The AI provider timed out. Try again later."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid ""
+"The AI request timed out. Its result is unknown; check provider activity "
+"before trying again."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/provider_http.py:0
+msgid ""
+"The AI request was blocked by permissions, a budget limit or content policy."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/models/ai_model.py:0
+msgid ""
+"The OpenRouter default model cannot be archived or have its identity "
+"changed."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/models/ai_model.py:0
+msgid "The OpenRouter default model cannot be deleted."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/models/ai_model.py:0
+msgid "The OpenRouter default model provider cannot be changed."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/models/ai_session.py:0
+msgid "The agent AI model or provider is archived."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-javascript
+#: code:addons/tw_custom_ai_provider/static/src/openrouter_tour.js:0
+msgid ""
+"The connection succeeded. Click this confirmation to finish. You can replay "
+"the guide from AI > Configuration > OpenRouter Setup Tour."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/media_adapter.py:0
+msgid ""
+"The conversation model returned unsupported image data. Configure an image "
+"generation model."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/media_adapter.py:0
+msgid "The image provider returned invalid image data."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/media_adapter.py:0
+msgid "The image provider returned no images."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/models/ai_provider.py:0
+msgid "The provider of the OpenRouter default model cannot be deleted."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/media_adapter.py:0
+msgid "The transcription provider returned invalid timestamps."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/media_adapter.py:0
+msgid "The transcription provider returned no text."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/media_adapter.py:0
+msgid "The transcription provider returned text without timestamps."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#. odoo-python
+#: code:addons/tw_custom_ai_provider/utils/media_adapter.py:0
+msgid "Unsupported recording format for transcription."
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_agent__use_global_model
+msgid "Use Global Model"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.module.module,summary:base.module_tw_custom_ai_provider
+msgid ""
+"Use OpenRouter or other custom providers with global or per-agent models"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_res_config_settings__ai_use_global_model
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.res_config_settings_view_form_custom_ai
+msgid "Use a global model for agents"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_model_view_form
+msgid "e.g. GPT-4o mini"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_provider_view_form
+msgid "e.g. OpenAI"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_model_view_form
+msgid "e.g. gpt-4o-mini"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_provider_view_form
+msgid "https://api.openai.com/v1"
+msgstr ""
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_provider_view_form
+msgid "sk-..."
+msgstr ""

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ai_provider_openai" model="ai.provider">
+        <field name="name">OpenAI</field>
+        <field name="technical_name">openai</field>
+        <field name="base_url">https://api.openai.com/v1</field>
+    </record>
+    <record id="ai_provider_anthropic" model="ai.provider">
+        <field name="name">Anthropic (Claude)</field>
+        <field name="technical_name">anthropic</field>
+        <field name="base_url">https://api.anthropic.com/v1</field>
+    </record>
+    <record id="ai_provider_gemini" model="ai.provider">
+        <field name="name">Google Gemini (OpenAI-compatible)</field>
+        <field name="technical_name">gemini</field>
+        <field name="base_url">https://generativelanguage.googleapis.com/v1beta/openai</field>
+    </record>
+    <data noupdate="1">
+        <record id="ai_provider_openrouter" model="ai.provider">
+            <field name="name">OpenRouter</field>
+            <field name="technical_name">openrouter</field>
+            <field name="base_url">https://openrouter.ai/api/v1</field>
+        </record>
+        <record id="ai_model_openrouter_default" model="ai.model">
+            <field name="name">OpenRouter Default Model</field>
+            <field name="technical_name">__openrouter_default__</field>
+            <field name="provider_id" ref="ai_provider_openrouter"/>
+            <field name="is_openrouter_default" eval="True"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ai_agent_view_form_inherit_custom_model" model="ir.ui.view">
+        <field name="name">ai.agent.form.inherit.custom.model</field>
+        <field name="model">ai.agent</field>
+        <field name="inherit_id" ref="ai_agentic.ai_agent_view_form"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Model" invisible="use_global_model">
+                    <group>
+                        <group name="model" string="Model">
+                            <field name="use_global_model" invisible="1"/>
+                            <field name="global_model_display_name" invisible="1"/>
+                            <field name="custom_model_id" readonly="use_global_model" placeholder="Leave empty to use Odoo AI credits"/>
+                            <field name="is_custom_model_enabled" invisible="1"/>
+                            <div colspan="2" class="text-muted" invisible="use_global_model or not is_custom_model_enabled">
+                                All chat turns of this agent are sent to "
+                                <field name="custom_model_display_name" readonly="1" nolabel="1"/>
+                                ". Requests bypass Odoo AI credits.
+                            </div>
+                            <div colspan="2" class="text-muted" invisible="use_global_model or is_custom_model_enabled">
+                                No custom model set: this agent runs on Odoo AI and consumes
+                                In-App Purchase credits.
+                            </div>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

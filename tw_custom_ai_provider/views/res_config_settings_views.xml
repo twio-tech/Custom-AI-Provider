@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_custom_ai" model="ir.ui.view">
+        <field name="name">res.config.settings.custom.ai</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app name="tw_custom_ai_provider" string="AI" logo="/ai/static/description/icon.png" groups="base.group_system">
+                    <block title="Agent Model">
+                        <setting string="Use a global model for agents" help="All agent sessions, subagents and chat titles use this model. Individual agent selections are preserved.">
+                            <field name="ai_use_global_model"/>
+                            <div class="content-group" invisible="not ai_use_global_model">
+                                <field name="ai_global_model_id" required="ai_use_global_model"/>
+                            </div>
+                        </setting>
+                    </block>
+                    <block title="Images and Audio">
+                        <setting string="Image generation" help="Choose an explicit image model from a provider supporting image generation. When empty, the conversation model is used if its API supports image generation.">
+                            <field name="ai_image_model_id"/>
+                        </setting>
+                        <setting string="Audio transcription" help="Choose a transcription model supporting verbose JSON with segment timestamps. Recordings are converted to Odoo VTT transcripts.">
+                            <field name="ai_transcription_model_id"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>

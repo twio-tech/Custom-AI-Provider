@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-inherit="ai_agentic.AiAgentPanel" t-inherit-mode="extension">
+        <xpath expr="//button[@role='tab']" position="attributes">
+            <attribute name="t-if">tab.id !== 'model' or !data.record.data.use_global_model</attribute>
+            <attribute name="t-att-class">{ 'o_ai_agent_panel_tab_active': this.isActiveTab(tab.id) or (tab.id === 'instructions' and data.record.data.use_global_model and this.isActiveTab('model')) }</attribute>
+        </xpath>
+        <xpath expr="//div[@t-if=&quot;this.isActiveTab('instructions')&quot;]" position="attributes">
+            <attribute name="t-if">this.isActiveTab('instructions') or (data.record.data.use_global_model and this.isActiveTab('model'))</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-if, 'triggers')]" position="after">
+            <div t-if="this.isActiveTab('model') and !data.record.data.use_global_model" role="tabpanel" class="d-flex flex-column w-100 pb-2">
+                <label class="fw-semibold mb-1" t-att-for="'custom_model_id'">Model</label>
+                <Field
+                    name="'custom_model_id'"
+                    record="data.record"
+                    fieldInfo="this.fieldNodes.custom_model_id"
+                    id="'custom_model_id'"
+                    readonly="data.record.data.use_global_model"
+                    class="'o_ai_agent_panel_model_field d-block w-100'"
+                />
+                <div class="text-muted small mt-2" t-if="data.record.data.custom_model_display_name">
+                    Runs on
+                    <span class="fw-semibold text-body">
+                        <t t-out="data.record.data.custom_model_display_name"/>
+                    </span>
+                    . Requests bypass Odoo AI credits.
+                </div>
+                <div class="text-muted small mt-2" t-else="">
+                    No custom model set: this agent runs on Odoo AI (In-App Purchase credits).
+                </div>
+            </div>
+        </xpath>
+    </t>
+
+</templates>

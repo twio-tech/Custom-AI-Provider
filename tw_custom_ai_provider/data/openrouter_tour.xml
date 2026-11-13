@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="openrouter_setup_tour" model="web_tour.tour">
+        <field name="name">tw_custom_ai_provider_openrouter</field>
+        <field name="sequence">1</field>
+        <field name="rainbow_man_message">OpenRouter is configured. Provider usage is billed to your account.</field>
+    </record>
+    <record id="openrouter_tour_admin_rule" model="ir.access">
+        <field name="name">OpenRouter onboarding is for administrators</field>
+        <field name="model_id" ref="web_tour.model_web_tour_tour"/>
+        <field name="operation">crud</field>
+        <field name="domain">[] if user.has_group('base.group_system') else [('name', '!=', 'tw_custom_ai_provider_openrouter')]</field>
+    </record>
+    <record id="openrouter_setup_action" model="ir.actions.act_url">
+        <field name="name">OpenRouter Setup Tour</field>
+        <field name="url">/odoo?tour=tw_custom_ai_provider_openrouter</field>
+        <field name="target">self</field>
+    </record>
+    <menuitem id="openrouter_setup_menu" name="OpenRouter Setup Tour" parent="ai_agentic.ai_config_menu" action="openrouter_setup_action" sequence="23" groups="base.group_system"/>
+</odoo>

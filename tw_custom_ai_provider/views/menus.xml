@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="ai_provider_menu_action" name="AI Providers" parent="ai_agentic.ai_config_menu" action="ai_provider_action" sequence="21" groups="base.group_system"/>
+    <menuitem id="ai_model_menu_action" name="Models" parent="ai_agentic.ai_config_menu" action="ai_model_action" sequence="22" groups="base.group_system"/>
+</odoo>
