@@ -11,7 +11,7 @@ class GlobalRoutingCase(TransactionCase):
         super().setUp()
         self.parameters = self.env['ir.config_parameter'].sudo()
         self.default_model = self.env.ref('tw_custom_ai_provider.ai_model_openrouter_default')
-        self.default_model.provider_id.api_key = 'test-key'
+        self.default_model.provider_id.write({'api_key': 'test-key', 'data_sharing_accepted': True})
         self.parameters.set_bool('tw_custom_ai_provider.use_global_model', True)
         self.parameters.set_int('tw_custom_ai_provider.global_model_id', self.default_model.id)
         self.other_model = self.env['ai.model'].create({'name': 'Other', 'technical_name': 'other', 'provider_id': self.default_model.provider_id.id})

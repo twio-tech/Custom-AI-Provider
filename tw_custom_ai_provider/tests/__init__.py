@@ -5,3 +5,4 @@ from . import test_global_routing
 from . import test_media
 from . import test_onboarding
 from . import test_neutralize
+from . import test_privacy

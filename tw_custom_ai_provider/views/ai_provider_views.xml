@@ -23,6 +23,13 @@
                     <div class="oe_title">
                         <h1><field name="name" placeholder="e.g. OpenAI"/></h1>
                     </div>
+                    <div class="alert alert-info" role="alert">
+                        <strong>Data sharing with your AI provider</strong>
+                        <p>Requests send conversation messages, agent instructions, tool definitions, tool results and relevant attachments to the configured provider. Image and transcription requests may also send images, documents or audio. The provider's processing and retention terms apply, and usage may incur charges.</p>
+                        <p>Authorize only if you are permitted to share this data and have reviewed the provider's terms. Connection tests send your API key to the configured endpoint. No connection test or AI request is allowed until you authorize data sharing.</p>
+                        <field name="data_sharing_accepted"/>
+                        <label for="data_sharing_accepted" string="I authorize data sharing with this provider on behalf of my organization."/>
+                    </div>
                     <group>
                         <group name="configuration" string="Configuration">
                             <field name="technical_name"/>

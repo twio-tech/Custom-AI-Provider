@@ -23,11 +23,11 @@ class AIModel(models.Model):
             model.name_with_provider = f"{model.name} ({model.provider_id.name})" if model.provider_id else model.name
 
     # Check whether the model and provider can send requests.
-    @api.depends('active', 'provider_id.api_key', 'provider_id.base_url', 'provider_id.active')
+    @api.depends('active', 'provider_id.api_key', 'provider_id.base_url', 'provider_id.active', 'provider_id.data_sharing_accepted')
     def _compute_is_api_ready(self):
         for model in self:
             provider = model.provider_id.sudo()
-            model.is_api_ready = bool(model.active and provider.active and provider.api_key and provider.base_url)
+            model.is_api_ready = bool(model.active and provider.active and provider.api_key and provider.base_url and provider.data_sharing_accepted)
 
     # Prevent changes to the protected default model identity.
     def write(self, vals):

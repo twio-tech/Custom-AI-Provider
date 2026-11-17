@@ -52,7 +52,7 @@ class MediaCase(TransactionCase):
         parameters = self.env['ir.config_parameter'].sudo()
         parameters.set_bool('tw_custom_ai_provider.use_global_model', True)
         provider = self.env.ref('tw_custom_ai_provider.ai_provider_openrouter')
-        provider.api_key = 'test'
+        provider.write({'api_key': 'test', 'data_sharing_accepted': True})
         model = self.env['ai.model'].create({'name': 'Images', 'technical_name': 'images/test', 'provider_id': provider.id})
         parameters.set_int('tw_custom_ai_provider.image_model_id', model.id)
         with patch.object(media_adapter, 'generate_images', return_value={}) as generate:
@@ -68,7 +68,7 @@ class MediaCase(TransactionCase):
         parameters = self.env['ir.config_parameter'].sudo()
         parameters.set_bool('tw_custom_ai_provider.use_global_model', True)
         provider = self.env.ref('tw_custom_ai_provider.ai_provider_openrouter')
-        provider.api_key = 'test'
+        provider.write({'api_key': 'test', 'data_sharing_accepted': True})
         model = self.env['ai.model'].create({'name': 'Transcription', 'technical_name': 'stt/test', 'provider_id': provider.id})
         parameters.set_int('tw_custom_ai_provider.transcription_model_id', model.id)
         channel = self.env['discuss.channel'].create({'name': 'Transcription Test'})
@@ -140,7 +140,7 @@ class MediaCase(TransactionCase):
         parameters.set_bool('tw_custom_ai_provider.use_global_model', False)
         parameters.set_int('tw_custom_ai_provider.image_model_id', 0)
         provider = self.env.ref('tw_custom_ai_provider.ai_provider_openrouter')
-        provider.api_key = 'test'
+        provider.write({'api_key': 'test', 'data_sharing_accepted': True})
         model = self.env['ai.model'].create({'name': 'Multimodal', 'technical_name': 'multimodal/test', 'provider_id': provider.id})
         agent = self.env['ai.agent'].create({'name': 'Fallback Test', 'custom_model_id': model.id})
         with patch.object(media_adapter, 'generate_images', return_value={}) as generate:
@@ -167,7 +167,7 @@ class MediaCase(TransactionCase):
         parameters = self.env['ir.config_parameter'].sudo()
         parameters.set_bool('tw_custom_ai_provider.use_global_model', True)
         provider = self.env.ref('tw_custom_ai_provider.ai_provider_openrouter')
-        provider.api_key = 'test'
+        provider.write({'api_key': 'test', 'data_sharing_accepted': True})
         model = self.env['ai.model'].create({'name': 'Scribe', 'technical_name': 'scribe/test', 'provider_id': provider.id})
         parameters.set_int('tw_custom_ai_provider.transcription_model_id', model.id)
         with patch('odoo.addons.tw_custom_ai_provider.controllers.ai.request', SimpleNamespace(env=self.env)), patch.object(media_adapter, 'post_json', return_value={'text': 'Hello'}) as post:

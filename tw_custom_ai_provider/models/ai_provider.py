@@ -11,11 +11,14 @@ class AIProvider(models.Model):
     base_url = fields.Char('Base URL', required=True, default='https://api.openai.com/v1', help='Root URL of an OpenAI-compatible API. Change it to point to an Azure gateway, LiteLLM proxy or any OpenAI-compatible backend.')
     api_key = fields.Char(groups='base.group_system', help='API key sent as Bearer token with every completion request.')
     active = fields.Boolean(default=True)
+    data_sharing_accepted = fields.Boolean(string='Authorize data sharing', default=False, copy=False, groups='base.group_system', help='Authorize requests to this provider after reviewing its processing, retention and billing terms. Changing the endpoint or provider identifier requires renewed authorization.')
     connection_status = fields.Selection([('not_tested', 'Not tested'), ('success', 'Connected'), ('error', 'Failed')], default='not_tested', readonly=True, copy=False)
 
     # Clear the previous connection result when its configuration changes.
     def write(self, vals):
-        if {'api_key', 'base_url', 'technical_name', 'active'} & vals.keys():
+        if {'base_url', 'technical_name'} & vals.keys():
+            vals = {**vals, 'data_sharing_accepted': False}
+        if {'api_key', 'base_url', 'technical_name', 'active', 'data_sharing_accepted'} & vals.keys():
             vals = {**vals, 'connection_status': 'not_tested'}
         return super().write(vals)
 
@@ -26,6 +29,8 @@ class AIProvider(models.Model):
         provider = self.sudo()
         if not provider.active:
             raise ValueError(f"AI provider {provider.name}: provider is archived")
+        if not provider.data_sharing_accepted:
+            raise UserError(_("An administrator must authorize data sharing in AI > Configuration > AI Providers before using this provider."))
         if not provider.base_url:
             raise ValueError(f"AI provider {provider.name}: missing base_url")
         if not provider.api_key:

@@ -14,6 +14,7 @@ class CustomProviderRoutingCase(TransactionCase):
             'technical_name': 'openai',
             'base_url': 'https://example.invalid/v1',
             'api_key': 'sk-test',
+            'data_sharing_accepted': True,
         })
         self.model = self.env['ai.model'].create({
             'name': 'GPT Test',

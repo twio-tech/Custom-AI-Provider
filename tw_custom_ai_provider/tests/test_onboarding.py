@@ -31,6 +31,11 @@ class OpenRouterTourCase(HttpCase):
     def test_openrouter_interactive_setup(self):
         self._run_setup_tour(code="odoo.startTour('tw_custom_ai_provider_openrouter', {mode: 'manual', robot: true})")
 
+    # Preserve existing authorization when replaying the interactive tour.
+    def test_openrouter_authorized_replay(self):
+        self.env.ref('tw_custom_ai_provider.ai_provider_openrouter').data_sharing_accepted = True
+        self._run_setup_tour(code="odoo.startTour('tw_custom_ai_provider_openrouter', {mode: 'manual', robot: true})")
+
     # Mock the provider while exercising credential entry and connection feedback.
     def _run_setup_tour(self, **options):
         admin = self.env.ref('base.user_admin')
@@ -42,3 +47,4 @@ class OpenRouterTourCase(HttpCase):
         provider.invalidate_recordset(['api_key'])
         self.assertEqual(provider.api_key, 'tour-test-key')
         self.assertEqual(provider.connection_status, 'success')
+        self.assertTrue(provider.data_sharing_accepted)

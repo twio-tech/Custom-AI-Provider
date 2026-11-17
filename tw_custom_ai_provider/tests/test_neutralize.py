@@ -10,7 +10,7 @@ class NeutralizationCase(TransactionCase):
         # Step 1: cover the seeded provider, archived credentials and keyless endpoints.
         default_model = self.env.ref('tw_custom_ai_provider.ai_model_openrouter_default')
         default_provider = default_model.provider_id
-        default_provider.write({'api_key': 'production-test-key', 'active': True})
+        default_provider.write({'api_key': 'production-test-key', 'active': True, 'data_sharing_accepted': True})
         default_provider.connection_status = 'success'
         providers = default_provider | self.env['ai.provider'].create([
             {'name': 'Archived', 'technical_name': 'archived-test', 'api_key': 'archived-test-key', 'active': False, 'connection_status': 'error'},
@@ -29,6 +29,7 @@ class NeutralizationCase(TransactionCase):
                 self.env.cr.execute(query)
             self.env.invalidate_all()
             self.assertFalse(any(providers.mapped('api_key')))
+            self.assertFalse(any(providers.mapped('data_sharing_accepted')))
             self.assertFalse(any(providers.mapped('active')))
             self.assertEqual(set(providers.mapped('connection_status')), {'not_tested'})
             self.assertEqual(providers.read(['name', 'technical_name', 'base_url']), before)

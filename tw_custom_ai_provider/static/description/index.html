@@ -1,117 +1,63 @@
-<section class="oe_container" style="font-family: 'Inter', sans-serif;">
-    <!-- Centered Logo at Top -->
-    <div class="oe_row oe_spaced text-center">
-        <div class="oe_span12">
-            <img src="icon.png" alt="Logo" style="max-height: 100px; width: auto; margin-bottom: 20px;">
-        </div>
-    </div>
+<section class="oe_container" style="box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.65;color:#333333;max-width:1000px;margin:0 auto;padding:24px;background:#fff;">
+  <div style="box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 20px;margin-bottom:26px;">
+    <img src="logo.png" alt="twio.tech" style="box-sizing:border-box;width:90px;height:auto;"/>
+  </div>
+  <div style="box-sizing:border-box;padding:0 0 24px;border-bottom:1px solid #e7e9ed;">
+    <p style="box-sizing:border-box;color:#0000ff;font-weight:700;font-size:17px;margin:0 0 6px;">Odoo AI.</p>
+    <h1 style="box-sizing:border-box;font-family:Arial Black,Arial,Helvetica,sans-serif;color:#000000;font-weight:900;line-height:1.2;letter-spacing:-0.5px;font-size:clamp(30px,4vw,42px);letter-spacing:-1px;margin:0 0 12px;">AI Custom Providers</h1>
+    <p style="box-sizing:border-box;font-size:20px;line-height:1.5;color:#000000;margin:0 0 12px;">Use OpenRouter and compatible AI models inside Odoo.</p>
+    <p style="box-sizing:border-box;margin:0;max-width:820px;">Connect your own provider account to Odoo AI agents. Choose one model for your team or a different model for each agent, while keeping conversations in the Odoo workspace.</p>
+    <p style="box-sizing:border-box;font-size:13px;margin:16px 0 0;color:#666c76;"><strong style="box-sizing:border-box;color:#0000ff;">Free module</strong> &nbsp;&#183;&nbsp; Provider usage billed separately &nbsp;&#183;&nbsp; English &amp; German interface</p>
+  </div>
 
-    <!-- Introduction -->
-    <div class="oe_row oe_spaced">
-        <div class="oe_span12" style="text-align: left !important;">
-            <p style="font-size: 1.1rem; line-height: 1.6;">
-                <strong>AI Custom Providers (OpenRouter)</strong> connects Odoo AI agents to OpenRouter and other compatible providers, with central model selection, image generation and audio transcription.
-            </p>
-        </div>
+  <div style="box-sizing:border-box;padding:30px 0;border-bottom:1px solid #e7e9ed;">
+    <h2 style="box-sizing:border-box;font-family:Arial Black,Arial,Helvetica,sans-serif;color:#000000;font-weight:900;line-height:1.2;letter-spacing:-0.5px;font-size:27px;margin:0 0 12px;">Your models. Your provider account.</h2>
+    <div style="box-sizing:border-box;display:flex;flex-wrap:wrap;gap:20px;margin-top:18px;">
+      <div style="box-sizing:border-box;flex:1 1 220px;border-top:4px solid #00f5cf;padding-top:12px;"><h3 style="box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;color:#000000;font-weight:700;line-height:1.3;font-size:18px;margin:0 0 8px;">OpenRouter included</h3><p style="box-sizing:border-box;margin:0;">Use your OpenRouter account default or specify model IDs. Other providers can be added through a compatible OpenAI API endpoint.</p></div>
+      <div style="box-sizing:border-box;flex:1 1 220px;border-top:4px solid #00f5cf;padding-top:12px;"><h3 style="box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;color:#000000;font-weight:700;line-height:1.3;font-size:18px;margin:0 0 8px;">Global or per-agent models</h3><p style="box-sizing:border-box;margin:0;">Set a shared model in Settings or choose models individually. Custom-provider requests use your account instead of Odoo AI credits.</p></div>
+      <div style="box-sizing:border-box;flex:1 1 220px;border-top:4px solid #00f5cf;padding-top:12px;"><h3 style="box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;color:#000000;font-weight:700;line-height:1.3;font-size:18px;margin:0 0 8px;">Images &amp; transcription</h3><p style="box-sizing:border-box;margin:0;">Select compatible models for image generation and speech-to-text in the existing Odoo workflows.</p></div>
     </div>
+  </div>
 
-    <!-- What the Project Does -->
-    <div class="oe_row oe_spaced"
-        style="padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 20px; text-align: left !important;">
-        <h2 style="color: #0000FF; margin-bottom: 20px;">What the Module Does</h2>
-        <p>Choose one conversation model for all agents or assign models individually. Route images and transcription to compatible models using your own provider account.</p>
-    </div>
+  <div style="box-sizing:border-box;padding:30px 0;border-bottom:1px solid #e7e9ed;">
+    <h2 style="box-sizing:border-box;font-family:Arial Black,Arial,Helvetica,sans-serif;color:#000000;font-weight:900;line-height:1.2;letter-spacing:-0.5px;font-size:27px;margin:0 0 12px;">Connect your provider</h2>
+    <p style="box-sizing:border-box;margin:0;">Enter your API key, review the data-sharing notice and authorize the provider before testing the connection. The included OpenRouter setup tour guides administrators through the initial configuration.</p>
+    <img src="images/provider.png" alt="OpenRouter configuration in Odoo: API URL, masked API key and Test Connection button." style="box-sizing:border-box;display:block;width:100%;max-width:100%;height:auto;margin:20px auto 0;border:1px solid #e1e4e8;border-radius:6px;"/>
+  </div>
 
-    <!-- Why the Module is Useful -->
-    <div class="oe_row oe_spaced"
-        style="padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 20px; text-align: left !important;">
-        <h2 style="color: #0000FF; margin-bottom: 20px;">Why the Module is Useful</h2>
-        <p>Keep AI configuration in one place and use provider billing for requests routed through this module.</p>
-        <ul style="padding-left: 20px;">
-            <li>OpenRouter is available by default, including a protected account-default model.</li><li>A global model covers conversations, subagents and chat titles.</li><li>Dedicated models handle image generation and audio transcription.</li><li>Individual agent choices remain saved when global routing is enabled.</li><li>Provider failures are reported without silently spending Odoo AI credits.</li>
-        </ul>
-    </div>
+  <div style="box-sizing:border-box;padding:30px 0;border-bottom:1px solid #e7e9ed;">
+    <h2 style="box-sizing:border-box;font-family:Arial Black,Arial,Helvetica,sans-serif;color:#000000;font-weight:900;line-height:1.2;letter-spacing:-0.5px;font-size:27px;margin:0 0 12px;">Manage models from Odoo Settings</h2>
+    <p style="box-sizing:border-box;margin:0;">Enable global routing to apply one conversation model across agents, subagents and chat titles. Configure image generation and audio transcription models separately.</p>
+    <img src="images/settings.png" alt="Odoo AI settings with global conversation model, image generation model and audio transcription model." style="box-sizing:border-box;display:block;width:100%;max-width:100%;height:auto;margin:20px auto 0;border:1px solid #e1e4e8;border-radius:6px;"/>
+  </div>
 
-    <!-- Getting Started Section -->
-    <div class="oe_row oe_spaced" style="padding: 5px 30px; margin-bottom: 0px; text-align: left !important;">
-        <h2 style="color: #0000FF; margin-bottom: 5px; text-align: left !important;">How Users Can Get Started</h2>
-        <details style="cursor: pointer; padding: 5px; margin-left: 15px;">
-            <summary style="font-size: 1.1rem; font-weight: 700; outline: none;"> Initial Configuration
-            </summary>
-            <div style="margin-top: 20px; padding-left: 25px;">
-                <ol><li>Open AI &gt; Configuration &gt; AI Providers and enter your provider API key.</li><li>Open Settings &gt; AI. On new installations, global routing starts enabled with OpenRouter Default Model. Configure your account default in OpenRouter.</li><li>Select compatible models for image generation and audio transcription, then save.</li></ol><p>Upgrades preserve existing settings and credentials. Global routing remains disabled when no previous setting exists.</p>
-            </div>
-        </details>
-        <details style="cursor: pointer; padding: 5px; margin-left: 15px;">
-            <summary style="font-size: 1.1rem; font-weight: 700; outline: none;"> Setup Master Data
-            </summary>
-            <div style="margin-top: 20px; padding-left: 25px;">
-                <p>Under AI &gt; Configuration &gt; AI Providers, set the name, provider identifier, API URL and API key. Use Test Connection to check access.</p><p>Under AI &gt; Configuration &gt; Models, create a display name, model identifier and provider. OpenRouter Default Model uses the account default and cannot be deleted, archived or reassigned.</p>
-            </div>
-        </details>
-        <details style="cursor: pointer; padding: 5px; margin-left: 15px;">
-            <summary style="font-size: 1.1rem; font-weight: 700; outline: none;"> Key Workflows
-            </summary>
-            <div style="margin-top: 20px; padding-left: 25px;">
-                <ul><li>With global routing enabled, all agent sessions use the selected model and the agent Model tab is hidden.</li><li>Disable global routing to select a model on each agent. Agents without a custom model use Odoo AI credits.</li><li>Enable the agent image skill and ask for an image. With no dedicated image model, the conversation model is attempted; it must support image output.</li><li>Use the chat microphone to transcribe speech. Recorded-call transcription also uses the selected transcription model and requires segment timestamps.</li></ul><p>Image and transcription selectors accept any provider whose supported API matches the task. This module does not add audio or video generation.</p>
-            </div>
-        </details>
-    </div>
+  <div style="box-sizing:border-box;padding:30px 0;border-bottom:1px solid #e7e9ed;display:flex;align-items:center;flex-wrap:wrap;gap:28px;">
+    <div style="box-sizing:border-box;flex:1 1 280px;"><h2 style="box-sizing:border-box;font-family:Arial Black,Arial,Helvetica,sans-serif;color:#000000;font-weight:900;line-height:1.2;letter-spacing:-0.5px;font-size:27px;margin:0 0 12px;">Choose a model for each agent</h2><p style="box-sizing:border-box;margin:0 0 12px;">Need different models for different tasks? Disable global routing and select a model on each agent's <strong>Model</strong> tab.</p><p style="box-sizing:border-box;margin:0;">Individual selections stay saved when global routing is enabled. With global routing disabled, agents without a custom model continue using Odoo AI credits.</p></div>
+    <div style="box-sizing:border-box;flex:1 1 320px;"><img src="images/agent.png" alt="The Model tab on an Odoo AI agent with OpenRouter Default Model selected." style="box-sizing:border-box;display:block;width:424px;max-width:100%;height:auto;margin:20px auto 0;border:1px solid #e1e4e8;border-radius:6px;"/></div>
+  </div>
 
-    <!-- Technical Details (Folded) -->
-    <div class="oe_row oe_spaced" style="padding: 5px 30px; margin-bottom: 20px; text-align: left !important;">
-        <h2 style="color: #0000FF; margin-bottom: 20px;">Technical Details</h2>
-        <details style="cursor: pointer; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 10px;">
-            <summary style="font-size: 1.1rem; font-weight: 700; outline: none;">
-                <i class="fa fa-code-fork" style="margin-right: 10px; color: #3b82f6;"></i> List of New Fields and Models
-            </summary>
-            <div style="margin-top: 20px; padding-left: 25px;">
-                <ul><li><strong>AI Providers:</strong> name, provider identifier, base URL, API key and active status; available under AI &gt; Configuration &gt; AI Providers.</li><li><strong>Models:</strong> display name, model identifier, provider and active status; available under AI &gt; Configuration &gt; Models.</li><li><strong>Agent Model:</strong> individual model selector on the agent Model tab, visible when global routing is disabled.</li><li><strong>Settings &gt; AI:</strong> Use a global model for agents, global model, Image generation and Audio transcription. These settings apply to the entire database.</li></ul>
-            </div>
-        </details>
-        <details style="cursor: pointer; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 10px;">
-            <summary style="font-size: 1.1rem; font-weight: 700; outline: none;">
-                <i class="fa fa-cogs" style="margin-right: 10px; color: #3b82f6;"></i> Added Actions and Buttons
-            </summary>
-            <div style="margin-top: 20px; padding-left: 25px;">
-                <p><strong>Test Connection</strong> on an AI provider checks access and displays the result. Existing agent image-generation and chat voice controls use the configured media models.</p>
-            </div>
-        </details>
-        <details style="cursor: pointer; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 10px;">
-            <summary style="font-size: 1.1rem; font-weight: 700; outline: none;">
-                <i class="fa fa-cubes" style="margin-right: 10px; color: #3b82f6;"></i> Module Dependencies
-            </summary>
-            <div style="margin-top: 20px; padding-left: 25px;">
-                <p>Requires Odoo 20 AI and AI Agents (ai and ai_agentic). Provider credentials are required for custom requests. The Odoo environment needs markdown2 to display formatted AI replies.</p>
-            </div>
-        </details>
-        <details style="cursor: pointer; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 10px;">
-            <summary style="font-size: 1.1rem; font-weight: 700; outline: none;">
-                <i class="fa fa-info-circle" style="margin-right: 10px; color: #3b82f6;"></i> Licence Information
-            </summary>
-            <div style="margin-top: 20px; padding-left: 25px;">
-                OPL-1
-            </div>
-        </details>
-    </div>
+  <div style="box-sizing:border-box;padding:30px 0;border-bottom:1px solid #e7e9ed;">
+    <h2 style="box-sizing:border-box;font-family:Arial Black,Arial,Helvetica,sans-serif;color:#000000;font-weight:900;line-height:1.2;letter-spacing:-0.5px;font-size:27px;margin:0 0 12px;">Get started in three steps</h2>
+    <ol style="box-sizing:border-box;padding-left:22px;margin:16px 0;">
+      <li style="box-sizing:border-box;margin-bottom:12px;"><strong style="box-sizing:border-box;color:#000000;">Connect your account.</strong> Open <strong>AI &gt; Configuration &gt; AI Providers</strong>, enter your credentials, review the provider terms, enable <strong>Authorize data sharing</strong> and click <strong>Test Connection</strong>. If you change the endpoint or provider identifier, save first and authorize again.</li>
+      <li style="box-sizing:border-box;margin-bottom:12px;"><strong style="box-sizing:border-box;color:#000000;">Choose your models.</strong> Use <strong>OpenRouter Default Model</strong> to follow your OpenRouter account default, or add exact model IDs under <strong>AI &gt; Configuration &gt; Models</strong>.</li>
+      <li><strong style="box-sizing:border-box;color:#000000;">Configure routing.</strong> Open <strong>Settings &gt; AI</strong> for global and media models, or disable global routing to assign models per agent.</li>
+    </ol>
+    <p style="box-sizing:border-box;margin:0;padding:14px 18px;background:#ffffff;border-left:4px solid #00f5cf;border-radius:0;font-size:13px;">On a fresh installation, global routing starts enabled with OpenRouter Default Model. Configure your API key and OpenRouter account default before using an agent. Replay the guided setup from <strong>AI &gt; Configuration &gt; OpenRouter Setup Tour</strong>.</p>
+  </div>
 
-    <!-- Version History -->
-    <div class="oe_row oe_spaced" style="padding: 5px 30px; margin-bottom: 0px; text-align: left !important;">
-        <h2 style="color: #0000FF; margin-bottom: 5px; text-align: left !important;">Version History</h2>
-        <details style="cursor: pointer; padding-left: 20px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 10px;">
-            <summary style="font-size: 1.1rem; font-weight: 700; outline: none;"> 20.0.1.3.0
-            </summary>
-            <div style="margin-top: 20px; padding-left: 25px;">
-                <p>Added OpenRouter account defaults, global routing, dedicated media models, image attachments, chat and recorded-call transcription, provider error handling, and global-mode tab visibility.</p>
-            </div>
-        </details>
-    </div>
+  <div style="box-sizing:border-box;padding:30px 0;border-bottom:1px solid #e7e9ed;">
+    <h2 style="box-sizing:border-box;font-family:Arial Black,Arial,Helvetica,sans-serif;color:#000000;font-weight:900;line-height:1.2;letter-spacing:-0.5px;font-size:27px;margin:0 0 12px;">Compatibility &amp; frequently asked questions</h2>
+    <div style="box-sizing:border-box;margin-top:18px;"><h3 style="box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;color:#000000;font-weight:700;line-height:1.3;font-size:18px;margin:0 0 8px;font-size:16px;">Which Odoo installations are supported?</h3><p style="box-sizing:border-box;margin:0;">Odoo 20 Enterprise on Odoo.sh or a self-hosted server, with AI and AI Agents installed. Administrator access is required for setup. This module cannot be installed on Odoo Online.</p></div>
+    <div style="box-sizing:border-box;margin-top:18px;"><h3 style="box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;color:#000000;font-weight:700;line-height:1.3;font-size:18px;margin:0 0 8px;font-size:16px;">Can I use Claude, Gemini and other models?</h3><p style="box-sizing:border-box;margin:0;">Yes, through model IDs available to your OpenRouter account. Other endpoints must expose a supported OpenAI-compatible API. Tool use, structured responses and media features depend on the selected model and endpoint.</p></div>
+    <div style="box-sizing:border-box;margin-top:18px;"><h3 style="box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;color:#000000;font-weight:700;line-height:1.3;font-size:18px;margin:0 0 8px;font-size:16px;">What does it cost?</h3><p style="box-sizing:border-box;margin:0;">The module is free under OPL-1. Your AI provider bills usage separately, and an Odoo Enterprise subscription is required. Failed custom-provider requests report an error without silently switching to Odoo AI credits.</p></div>
+    <div style="box-sizing:border-box;margin-top:18px;"><h3 style="box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;color:#000000;font-weight:700;line-height:1.3;font-size:18px;margin:0 0 8px;font-size:16px;">Which image and audio features are supported?</h3><p style="box-sizing:border-box;margin:0;">Image generation returns images as Odoo attachments. Transcription supports chat voice input and recorded calls; recorded calls require verbose JSON with segment timestamps. Select compatible models and endpoints. Embeddings routing, native web grounding, audio generation and video generation are not included.</p></div>
+    <div style="box-sizing:border-box;margin-top:18px;"><h3 style="box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;color:#000000;font-weight:700;line-height:1.3;font-size:18px;margin:0 0 8px;font-size:16px;">Are models added automatically?</h3><p style="box-sizing:border-box;margin:0;">No. Add exact model IDs manually, or use OpenRouter Default Model to follow the default in your OpenRouter account.</p></div>
+    <div style="box-sizing:border-box;margin-top:18px;"><h3 style="box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;color:#000000;font-weight:700;line-height:1.3;font-size:18px;margin:0 0 8px;font-size:16px;">Where is my data processed?</h3><p style="box-sizing:border-box;margin:0;">Requests send conversation messages, agent instructions, tool definitions, tool results and relevant attachments to your configured provider. Image and transcription requests may also send images, documents or audio. Its processing and retention terms apply, and usage may incur charges. An administrator must explicitly authorize each provider before connection tests or AI requests. Authorization can be revoked in the provider form. Changing the endpoint or provider identifier requires renewed authorization. Odoo database neutralization clears keys and authorization, archives providers and resets connection results.</p></div>
+  </div>
 
-    <!-- Footer -->
-    <div class="oe_row oe_spaced" style="padding-top: 40px; border-top: 1px solid #f1f5f9; text-align: left !important;">
-        <div class="oe_span6">
-            <p style="margin-bottom: 0;">Developed by <strong>twio.tech AG</strong> | <a href="https://www.twio.tech"
-                    target="_blank" style="color: #3b82f6; text-decoration: none;">www.twio.tech</a></p>
-        </div>
-    </div>
+  <div style="box-sizing:border-box;padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;">
+    <span>Developed and maintained by <strong style="box-sizing:border-box;color:#000000;">twio.tech AG</strong><br/>www.twio.tech</span>
+    <a href="mailto:hello@twio.tech?subject=Odoo%20AI%20Custom%20Providers" style="box-sizing:border-box;color:#0000ff;text-decoration:none;font-weight:600;">Questions? hello@twio.tech</a>
+  </div>
 </section>

@@ -811,3 +811,43 @@ msgstr "https://api.openai.com/v1"
 #: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_provider_view_form
 msgid "sk-..."
 msgstr "sk-..."
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,field_description:tw_custom_ai_provider.field_ai_provider__data_sharing_accepted
+msgid "Authorize data sharing"
+msgstr "Datenweitergabe autorisieren"
+
+#. module: tw_custom_ai_provider
+#: model:ir.model.fields,help:tw_custom_ai_provider.field_ai_provider__data_sharing_accepted
+msgid "Authorize requests to this provider after reviewing its processing, retention and billing terms. Changing the endpoint or provider identifier requires renewed authorization."
+msgstr "Autorisieren Sie Anfragen an diesen Anbieter nach Prüfung seiner Verarbeitungs-, Aufbewahrungs- und Abrechnungsbedingungen. Änderungen am Endpunkt oder an der Anbieterkennung erfordern eine erneute Autorisierung."
+
+#. module: tw_custom_ai_provider
+#: code:addons/tw_custom_ai_provider/models/ai_provider.py:0
+msgid "An administrator must authorize data sharing in AI > Configuration > AI Providers before using this provider."
+msgstr "Ein Administrator muss die Datenweitergabe unter KI > Konfiguration > KI-Anbieter autorisieren, bevor dieser Anbieter verwendet werden kann."
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_provider_view_form
+msgid "Data sharing with your AI provider"
+msgstr "Datenweitergabe an Ihren KI-Anbieter"
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_provider_view_form
+msgid "Requests send conversation messages, agent instructions, tool definitions, tool results and relevant attachments to the configured provider. Image and transcription requests may also send images, documents or audio. The provider's processing and retention terms apply, and usage may incur charges."
+msgstr "Anfragen senden Gesprächsnachrichten, Agentenanweisungen, Werkzeugdefinitionen, Werkzeugergebnisse und relevante Anhänge an den konfigurierten Anbieter. Bild- und Transkriptionsanfragen können auch Bilder, Dokumente oder Audio senden. Es gelten die Verarbeitungs- und Aufbewahrungsbedingungen des Anbieters; die Nutzung kann Kosten verursachen."
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_provider_view_form
+msgid "Authorize only if you are permitted to share this data and have reviewed the provider's terms. Connection tests send your API key to the configured endpoint. No connection test or AI request is allowed until you authorize data sharing."
+msgstr "Autorisieren Sie nur, wenn Sie diese Daten weitergeben dürfen und die Bedingungen des Anbieters geprüft haben. Verbindungstests senden Ihren API-Schlüssel an den konfigurierten Endpunkt. Ohne Autorisierung sind weder Verbindungstests noch KI-Anfragen möglich."
+
+#. module: tw_custom_ai_provider
+#: model_terms:ir.ui.view,arch_db:tw_custom_ai_provider.ai_provider_view_form
+msgid "I authorize data sharing with this provider on behalf of my organization."
+msgstr "Ich autorisiere die Datenweitergabe an diesen Anbieter im Namen meiner Organisation."
+
+#. module: tw_custom_ai_provider
+#: code:addons/tw_custom_ai_provider/static/src/openrouter_tour.js:0
+msgid "Review the data-sharing notice and your provider's terms. Authorize only if you may share this data on behalf of your organization."
+msgstr "Lesen Sie den Hinweis zur Datenweitergabe und die Bedingungen Ihres Anbieters. Autorisieren Sie nur, wenn Sie diese Daten im Namen Ihrer Organisation weitergeben dürfen."

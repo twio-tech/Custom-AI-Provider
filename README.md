@@ -8,6 +8,8 @@ Connect Odoo AI agents to OpenRouter and other OpenAI-compatible providers, with
 - Select one global model for all agents or configure models per agent.
 - Configure compatible models for image generation and audio transcription.
 
+Claude models are supported through OpenRouter or an OpenAI-compatible gateway. The native Anthropic API is not supported. Its legacy provider example is archived on fresh installations; configure a compatible gateway before activating it. Existing provider settings are preserved on upgrade.
+
 ## Requirements
 
 - Odoo 20 Enterprise with the `ai` and `ai_agentic` modules.
@@ -18,7 +20,9 @@ The module is intended for free distribution. Provider usage and Odoo Enterprise
 
 ## Data processing
 
-AI requests send relevant conversation content and, depending on the feature used, images or audio to the configured provider. Review the provider's privacy policy and obtain the required consent before enabling the integration.
+Requests send conversation messages, agent instructions, tool definitions, tool results and relevant attachments to the configured provider. Image and transcription requests may also send images, documents or audio. Provider processing and retention terms apply, and usage may incur charges.
+
+An administrator must review these terms and explicitly enable **Authorize data sharing** on each provider before connection tests or AI requests. Authorization is off by default, can be revoked at any time, and is not copied with a provider. Changing the API URL or provider identifier clears authorization: save the new endpoint, then authorize again. Existing installations also require authorization after upgrading.
 
 ## Publisher
 
@@ -34,7 +38,7 @@ Test Connection saves pending provider changes and displays the result in the fo
 
 ## Database neutralization
 
-Odoo's native neutralization runs `tw_custom_ai_provider/data/neutralize.sql` on a copied database. It clears every provider API key, archives all providers (including keyless endpoints), and resets connection results. Model definitions, URLs and routing selections remain in place. Requests using an archived provider fail; neutralization does not switch them to Odoo IAP credits.
+Odoo's native neutralization runs `tw_custom_ai_provider/data/neutralize.sql` on a copied database. It clears every provider API key and data-sharing authorization, archives all providers (including keyless endpoints), and resets connection results. Model definitions, URLs and routing selections remain in place. Requests using an archived provider fail; neutralization does not switch them to Odoo IAP credits.
 
 To use AI in the neutralized copy, reactivate the provider and enter a dedicated test API key. Installing or upgrading the module does not execute this script. Existing staging databases need neutralization to be run again or their credentials cleared manually. This script is discovered by Odoo and must not be added to the manifest's `data` list.
 

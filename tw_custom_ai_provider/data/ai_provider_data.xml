@@ -5,17 +5,18 @@
         <field name="technical_name">openai</field>
         <field name="base_url">https://api.openai.com/v1</field>
     </record>
-    <record id="ai_provider_anthropic" model="ai.provider">
-        <field name="name">Anthropic (Claude)</field>
-        <field name="technical_name">anthropic</field>
-        <field name="base_url">https://api.anthropic.com/v1</field>
-    </record>
     <record id="ai_provider_gemini" model="ai.provider">
         <field name="name">Google Gemini (OpenAI-compatible)</field>
         <field name="technical_name">gemini</field>
         <field name="base_url">https://generativelanguage.googleapis.com/v1beta/openai</field>
     </record>
     <data noupdate="1">
+        <record id="ai_provider_anthropic" model="ai.provider">
+            <field name="name">Anthropic (OpenAI-compatible gateway required)</field>
+            <field name="technical_name">anthropic</field>
+            <field name="base_url">https://api.anthropic.com/v1</field>
+            <field name="active" eval="False"/>
+        </record>
         <record id="ai_provider_openrouter" model="ai.provider">
             <field name="name">OpenRouter</field>
             <field name="technical_name">openrouter</field>

@@ -37,6 +37,12 @@ registry.category("web_tour.tours").add("tw_custom_ai_provider_openrouter", {
             run: "edit tour-test-key",
         },
         {
+            isActive: ['.o_field_widget[name="data_sharing_accepted"] input:not(:checked)'],
+            trigger: '.o_field_widget[name="data_sharing_accepted"] input',
+            content: _t("Review the data-sharing notice and your provider's terms. Authorize only if you may share this data on behalf of your organization."),
+            run: "click",
+        },
+        {
             trigger: 'button[name="action_test_connection"]',
             content: _t("Click Test Connection to save your API key and check access to OpenRouter. If it fails, correct your key and try again."),
             run: "click",
